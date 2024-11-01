@@ -20,6 +20,7 @@ public class Main {
         p.add_pizza(orderedPizza1);
         p.add_pizza(orderedPizza2);
         p.remove_pizza(orderedPizza1);
+        p.get_Ordered_pizza();
 
         System.out.println(doge.pizza_list());
         System.out.println(toni.pizza_list());
@@ -31,6 +32,7 @@ public class Main {
 
         p.add_pizza(new Ordered_pizza("mleko", 5));
         p.order_pizza(doge);
+
 
     }
 }

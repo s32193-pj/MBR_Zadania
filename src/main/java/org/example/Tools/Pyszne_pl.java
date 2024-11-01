@@ -5,7 +5,6 @@ import lombok.ToString;
 import org.example.Pizza.Pizza;
 import org.example.Pizzeria.Pizzeria;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 @NoArgsConstructor
 @ToString
@@ -26,8 +25,8 @@ public class Pyszne_pl {
         int checkout = 0;
         ArrayList<Pizza> pizzeria_pizza = pizzeria.getPizzas();
         for (Pizza pizza : pizzeria_pizza) {
-            for (int i = 0; i < pizzaArrayList.size(); i++) {
-                if(pizza.getSize() == pizzaArrayList.get(i).getSize() && pizza.getName() == pizzaArrayList.get(i).getName()){
+            for (Pizza value : pizzaArrayList) {
+                if (pizza.getSize() == value.getSize() && pizza.getName().equals(value.getName())) {
                     checkout += pizza.getPrice();
                 }
             }
@@ -38,8 +37,12 @@ public class Pyszne_pl {
             System.out.println("Order failed!");
         }
     }
-    public ArrayList<Pizza> get_Ordered_pizza(){
-        return pizzaArrayList;
+    public void get_Ordered_pizza(){
+        StringBuilder builder = new StringBuilder();
+        for (Pizza pizza : pizzaArrayList) {
+            builder.append(pizza.getSize()).append(" ").append(pizza.getName()).append("\n");
+        }
+        System.out.println(builder.toString());
     }
 
     public void removeOrders(){
