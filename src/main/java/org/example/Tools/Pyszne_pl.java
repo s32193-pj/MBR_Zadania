@@ -42,7 +42,7 @@ public class Pyszne_pl {
         for (Pizza pizza : pizzaArrayList) {
             builder.append(pizza.getSize()).append(" ").append(pizza.getName()).append("\n");
         }
-        System.out.println(builder.toString());
+        System.out.println(builder);
     }
 
     public void removeOrders(){

@@ -8,7 +8,7 @@ import org.example.Pizza.Pizza;
 import java.util.ArrayList;
 
 public class Doge_pizza implements Pizzeria {
-    ArrayList<Pizza> pizzas = new ArrayList<Pizza>();
+    ArrayList<Pizza> pizzas = new ArrayList<>();
 
     public Doge_pizza() {
         pizzas.add(new Margerita(15*1,1,"Margerita"));
